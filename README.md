@@ -92,13 +92,26 @@ cloud-catalog/
 
 Live site: [cloud-catalog-one.vercel.app](https://cloud-catalog-one.vercel.app). Vercel project: `christ-university3/cloud-catalog`.
 
-Source repository: [JasonSeraphim/cloud-catalog](https://github.com/JasonSeraphim/cloud-catalog). The production branch is `main`.
+Source repository: [JasonSeraphim/cloud-catalog](https://github.com/JasonSeraphim/cloud-catalog). The production branch is `main`. Vercel is connected to this repository and automatically deploys pushes to `main`.
 
 Deploy this directory as an Express project on Vercel. `server.js` exports the application, `public/` contains the static pages, and Node.js 22.x is specified in `package.json`. No database or environment secrets are required.
 
 Vercel serves the static files through its CDN and runs the JSON routes as an Express function. The homepage has an explicit Express handler because the hosted runtime does not use `express.static`. Local execution continues to use port 8080 unless `PORT` is set. Keep `package-lock.json` with the source for reproducible installs. Ignore files exclude dependencies, local environment files, and Vercel account metadata from publication.
 
-After signing in to the intended Vercel account, deploy with:
+## Publish updates through Git
+
+From this project directory, make your changes, run the checks, commit, and push:
+
+```sh
+npm test
+git add public server.js README.md package.json package-lock.json test vercel.json
+git commit -m "Describe your changes"
+git push origin main
+```
+
+Vercel builds the pushed commit and updates the existing production URL. Dependencies, environment files, and local Vercel settings remain ignored.
+
+For a manual deployment from a signed-in Vercel CLI session:
 
 ```sh
 npx vercel --prod
