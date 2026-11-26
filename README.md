@@ -92,7 +92,7 @@ cloud-catalog/
 
 Live site: [cloud-catalog-one.vercel.app](https://cloud-catalog-one.vercel.app). Vercel project: `christ-university3/cloud-catalog`.
 
-Source repository: [jasonseraphim2004-alt/cloud-catalog](https://github.com/jasonseraphim2004-alt/cloud-catalog). The production branch is `main`.
+Source repository: [JasonSeraphim/cloud-catalog](https://github.com/JasonSeraphim/cloud-catalog). The production branch is `main`.
 
 Deploy this directory as an Express project on Vercel. `server.js` exports the application, `public/` contains the static pages, and Node.js 22.x is specified in `package.json`. No database or environment secrets are required.
 
