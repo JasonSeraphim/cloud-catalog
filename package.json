@@ -1,0 +1,19 @@
+{
+  "name": "cloud-catalog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Enterprise Cloud Service Catalog by Jason Seraphim (2648029)",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "author": "Jason Seraphim",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
